@@ -15,7 +15,7 @@ template2 = ("This weekend, I'm going camping with my friend {person}. "
              "I'm a little {feeling2} though, because I heard we might run into a(n) {animal}, and they're pretty dangerous. "
              "During the day, we'll be hiking, fishing, and {verb2} by the lake. "
              "The {color} lake is known for its {verb_ing} spots, so we’ll definitely try that. "
-             "Then, we’ll {adverb} hike through the forest for {num1} {time_measure}. "
+             "Then, we’ll {adverb} (ending in ly)) hike through the forest for {num1} {time_measure}. "
              "If I see a {color2} {animal2} while hiking, I’ll definitely bring it home as my new pet! "
              "At night, we’ll tell {num2} crazy stories and roast {noun2}s around the campfire.")
 
@@ -90,11 +90,18 @@ elif story_template == template2:
          if word.endswith("ing"):
             break
          else:
-           print("input valid word")
+           print("input word with -ing ending")
        except TypeError:
         print("input valid word")
-
-    words["adverb"] = input("Type an adverb: ")
+    while True:
+      try:
+         word= input("Type an adverb enidng in -ly: ")
+         if word.endswith("ly"):
+           break
+         else:
+            print("input word with -ly ending")
+      except TypeError:
+        print("input valid word")
     while True:
       try:
         words["num1"] = int(input("Type a number: "))
