@@ -1,3 +1,5 @@
+#code_practice
+
 import random
 
 template1 = ("It was about {num1} {time_measure} ago when I arrived at the hospital in a {transport}. "
